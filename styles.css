@@ -1,72 +1,75 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f4f4f4;
 }
 
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
+.container {
+  max-width: 600px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-header h1 {
-    margin: 0;
+.profile {
+  text-align: center;
 }
 
-nav ul {
-    list-style-type: none;
-    padding: 0;
+.name {
+  font-size: 32px;
+  margin-bottom: 10px;
 }
 
-nav ul li {
-    display: inline;
-    margin-right: 20px;
+.quote {
+  font-style: italic;
+  margin-bottom: 20px;
 }
 
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
+.contact {
+  text-align: left;
 }
 
-.hero {
-    background-image: url('background.jpg');
-    background-size: cover;
-    color: #fff;
-    text-align: center;
-    padding: 100px 0;
+.contact h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
 }
 
-.hero h2 {
-    font-size: 36px;
+.contact ul {
+  list-style-type: none;
+  padding: 0;
 }
 
-.hero p {
-    font-size: 18px;
-    margin-bottom: 20px;
+.contact ul li {
+  margin-bottom: 5px;
 }
 
-.btn {
-    background-color: #4CAF50;
-    color: #fff;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: background-color 0.3s;
+.email,
+.phone {
+  font-weight: bold;
 }
 
-.btn:hover {
-    background-color: #45a049;
+/* Animasi */
+.name,
+.quote,
+.email,
+.phone {
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
 }
 
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 20px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

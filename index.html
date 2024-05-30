@@ -1,25 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hi, Welcome</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perkenalan</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="container">
-    <div class="profile">
-      <h1 class="name">Khen Patra</h1>
-      <p class="quote">"Perhaps"</p>
-      <div class="contact">
-        <h2>Kontak</h2>
-        <ul>
-          <li>Email: <span class="Instagram">Khen_patra0317</span></li>
-          <li>Telepon: <span class="phone">-</span></li>
-          <!-- Anda bisa menambahkan kontak lainnya di sini -->
-        </ul>
-      </div>
-    </div>
-  </div>
+    <header>
+        <h1>Selamat Datang di Situs Saya</h1>
+    </header>
+    <main>
+        <section id="about">
+            <h2>Tentang Saya</h2>
+            <p>Halo! Nama saya [Nama Anda]. Saya seorang [profesi atau deskripsi singkat tentang diri Anda].</p>
+            <p>Saya tertarik dalam [hobi atau minat].</p>
+        </section>
+        <section id="contact">
+            <h2>Kontak</h2>
+            <form action="mailto:email@example.com" method="post" enctype="text/plain">
+                <label for="name">Nama:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message">Pesan:</label>
+                <textarea id="message" name="message" required></textarea>
+                
+                <input type="submit" value="Kirim">
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 [Nama Anda]. Semua Hak Dilindungi.</p>
+    </footer>
 </body>
 </html>

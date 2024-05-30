@@ -1,19 +1,71 @@
+@keyframes slideInLeft {
+    0% {
+      transform: translateX(-50%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  @keyframes slideInRight {
+    0% {
+      transform: translateX(50%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  @keyframes slideInDown {
+    0% {
+      transform: translateY(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  @keyframes slideInUp {
+    0% {
+      transform: translateY(100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  @keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     line-height: 1.6;
+    animation: 1s ease-out 0s 1 fadeInAnimation;
 }
-
+.left {
+    animation: 1s ease-out 0s 1 slideInLeft;
+}
+.right {
+    animation: 1s ease-out 0s 1 slideInRight;
+}
+.fade{
+    animation: 2s ease-out 0s 1 fadeInAnimation;
+}
 header {
-    background-color: #1D4671;
+    background-color: #0c243d;
     color: white;
     padding: 1rem 0;
     text-align: center;
+    font-family: papyrus;
+    animation: 1s ease-out 0s 1 slideInDown;
 }
 
 main {
     padding: 2rem;
+    
 }
 
 section {
@@ -21,14 +73,20 @@ section {
     text-align: center;
 }
 
-h1, h2 {
+h1{
+    color : #fff
+}
+h2,h3 {
     color: #333;
+    font-family: papyrus;
 }
 
 footer {
     text-align: center;
     padding: 1rem 0;
     background-color: #f1f1f1;
+    font-family: papyrus;
+    animation: 1s ease-out 0s 1 slideInUp;
 }
 .fancy {
  background-color: transparent;
@@ -133,3 +191,4 @@ footer {
  right: 0;
  width: 0;
 }
+

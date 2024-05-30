@@ -24,37 +24,6 @@ h1, h2 {
     color: #333;
 }
 
-form {
-    display: flex;
-    flex-direction: column;
-}
-
-label {
-    margin-top: 1rem;
-    margin-bottom: 0.5rem;
-}
-
-input, textarea {
-    padding: 0.5rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    width: 100%;
-    max-width: 500px;
-}
-
-input[type="submit"] {
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    cursor: pointer;
-    margin-top: 1rem;
-    padding: 1rem;
-}
-
-input[type="submit"]:hover {
-    background-color: #45a049;
-}
-
 footer {
     text-align: center;
     padding: 1rem 0;

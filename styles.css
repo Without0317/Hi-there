@@ -1,66 +1,56 @@
-@keyframes slideInLeft {
-    0% {
-      transform: translateX(-100%);
-    }
-    100% {
-      transform: translateX(0);
-    }
+@keyframes expand {
+  0% {
+    transform: translateX(0%);
   }
-  @keyframes slideInRight {
-    0% {
-      transform: translateX(100%);
-    }
-    100% {
-      transform: translateX(0);
-    }
+  99% {
+    transform: translateX(100%);
   }
-  @keyframes slideInDown {
-    0% {
-      transform: translateY(-100%);
-    }
-    100% {
-      transform: translateX(0);
-    }
+  100%{
+    transform: scale(0);
   }
-  @keyframes slideInUp {
-    0% {
-      transform: translateY(100%);
-    }
-    100% {
-      transform: translateX(0);
-    }
-  }
-  @keyframes fadeInAnimation {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
 }
+@keyframes slideInup {
+  0% {
+    transform: translatey(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.slide{
+  animation-name: slideInup;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-delay: 1s;
+}
+#overlay {
+  position: fixed; /* Sit on top of the page content */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgb(13, 13, 13); /* Black background with opacity */
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer; /* Add a pointer on hover */
+  animation-name: expand;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+  animation-delay: 0.5s;
+}
+
 body {
-    font-family:  Arial, georgia, sans-serif;
+    font-family: Arial, sans-serif;
     margin: 0;
-    padding: 0;
     line-height: 1.6;
-    animation: 1s ease-out 0s 1 fadeInAnimation;
 }
-.left {
-    animation: 1s ease-out 0s 1 slideInLeft;
-}
-.right {
-    animation: 1s ease-out 0s 1 slideInRight;
-}
-.fade{
-    animation: 2s ease-out 0s 1 fadeInAnimation;
-}
+
 header {
-    background-color: #0c243d;
+  background-color: #0c243d;
     color: white;
     padding: 1rem 0;
     text-align: center;
     font-family: papyrus;
-    animation: 1s ease-out 0s 1 slideInDown;
 }
 
 main {
@@ -84,9 +74,9 @@ h2,h3 {
 footer {
     text-align: center;
     padding: 1rem 0;
-    background-color: #f1f1f1;
+    color: #fff;
     font-family: papyrus;
-    animation: 1s ease-out 0s 1 slideInUp;
+    background-color: #0c243d;
 }
 .fancy {
  background-color: transparent;

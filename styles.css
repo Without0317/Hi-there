@@ -5,13 +5,13 @@
   99% {
     transform: translateX(100%);
   }
-  100%{
+  100% {
     transform: scale(0);
   }
 }
 @keyframes slideInup {
   0% {
-    transform: translatey(100%);
+    transform: translateY(100%);
   }
   100% {
     transform: translateX(0);
@@ -19,11 +19,45 @@
 }
 @keyframes fade {
   0% {
-    transform: opacity(0%);
+    opacity: 0;
   }
   100% {
-    transform: opacity(100%);
+    opacity: 1;
   }
+}
+@keyframes r {
+  0% {
+    transform: translateX(-30%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes l {
+  0% {
+    transform: translateX(30%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.l{
+  animation-name: l;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  transition: ease-out;
+  animation-delay: 1s;
+}
+.r{
+  animation-name: r;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  transition: ease-out;
+  animation-delay: 1s;
 }
 .slide{
   animation-name: slideInup;
@@ -32,222 +66,197 @@
   animation-delay: 1s;
 }
 #overlay {
-  position: fixed; /* Sit on top of the page content */
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgb(13, 13, 13); /* Black background with opacity */
-  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
-  cursor: pointer; /* Add a pointer on hover */
+  background-color: rgb(13, 13, 13);
+  z-index: 2;
+  cursor: pointer;
   animation-name: expand;
   animation-duration: 1s;
   animation-fill-mode: forwards;
   animation-delay: 1s;
+
 }
 #title{
   font-size: 70px;
   position: relative;
   top: 40%;
   text-align: center;
+  color: #fff;
 }
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    line-height: 1.6;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  line-height: 1.6;
+  background-image: url(background.png);
 }
-
 header {
   background-color: #0c243d;
-    color: white;
-    padding: 1rem 0;
-    text-align: center;
-    font-family: papyrus;
+  color: white;
+  padding: 1rem 0;
+  text-align: center;
+  font-family: papyrus;
 }
-
 main {
-    padding: 2rem;
-    
+  padding: 2rem;
 }
-
 section {
-    margin-bottom: 2rem;
-    text-align: center;
+  margin-bottom: 2rem;
+  text-align: center;
 }
-
 h1{
-    color : #fff
+  color: #fff;
 }
 h2,h3 {
-    color: #333;
-    font-family: papyrus;
+  color: #333;
+  font-family: papyrus;
 }
-
 footer {
-    text-align: center;
-    padding: 1rem 0;
-    color: #fff;
-    font-family: papyrus;
-    background-color: #0c243d;
+  text-align: center;
+  padding: 1rem 0;
+  color: #fff;
+  font-family: papyrus;
+  background-color: #0c243d;
 }
 .fancy {
- background-color: transparent;
- border: 2px solid #000;
- border-radius: 0;
- box-sizing: border-box;
- color: #fff;
- cursor: pointer;
- display: inline-block;
- font-weight: 700;
- letter-spacing: 0.05em;
- margin: 0;
- outline: none;
- overflow: visible;
- padding: 2em 2em;
- position: relative;
- text-align: center;
- text-decoration: none;
- text-transform: none;
- transition: all 0.3s ease-in-out;
- user-select: none;
- font-size: 13px;
+  background-color: transparent;
+  border: 2px solid #000;
+  border-radius: 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  margin: 0;
+  outline: none;
+  overflow: visible;
+  padding: 2em 2em;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  text-transform: none;
+  transition: all 0.3s ease-in-out;
+  user-select: none;
+  font-size: 13px;
 }
-
 .fancy::before {
- content: " ";
- width: 1.5625rem;
- height: 2px;
- background: black;
- top: 50%;
- left: 1.5em;
- position: absolute;
- transform: translateY(-50%);
- transform-origin: center;
- transition: background 0.3s linear, width 0.3s linear;
+  content: " ";
+  width: 1.5625rem;
+  height: 2px;
+  background: black;
+  top: 50%;
+  left: 1.5em;
+  position: absolute;
+  transform: translateY(-50%);
+  transform-origin: center;
+  transition: background 0.3s linear, width 0.3s linear;
 }
-
 .fancy .text {
- font-size: 1.125em;
- line-height: 1.33333em;
- padding-left: 2em;
- display: block;
- text-align: left;
- transition: all 0.3s ease-in-out;
- text-transform: uppercase;
- text-decoration: none;
- color: black;
+  font-size: 1.125em;
+  line-height: 1.33333em;
+  padding-left: 2em;
+  display: block;
+  text-align: left;
+  transition: all 0.3s ease-in-out;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: black;
 }
-
 .fancy .top-key {
- height: 2px;
- width: 1.5625rem;
- top: -2px;
- left: 0.625rem;
- position: absolute;
- background: #e8e8e8;
- transition: width 0.5s ease-out, left 0.3s ease-out;
+  height: 2px;
+  width: 1.5625rem;
+  top: -2px;
+  left: 0.625rem;
+  position: absolute;
+  background: #e8e8e8;
+  transition: width 0.5s ease-out, left 0.3s ease-out;
 }
-
 .fancy .bottom-key-1 {
- height: 2px;
- width: 1.5625rem;
- right: 1.875rem;
- bottom: -2px;
- position: absolute;
- background: #e8e8e8;
- transition: width 0.5s ease-out, right 0.3s ease-out;
+  height: 2px;
+  width: 1.5625rem;
+  right: 1.875rem;
+  bottom: -2px;
+  position: absolute;
+  background: #e8e8e8;
+  transition: width 0.5s ease-out, right 0.3s ease-out;
 }
-
 .fancy .bottom-key-2 {
- height: 2px;
- width: 0.625rem;
- right: 0.625rem;
- bottom: -2px;
- position: absolute;
- background: #e8e8e8;
- transition: width 0.5s ease-out, right 0.3s ease-out;
+  height: 2px;
+  width: 0.625rem;
+  right: 0.625rem;
+  bottom: -2px;
+  position: absolute;
+  background: #e8e8e8;
+  transition: width 0.5s ease-out, right 0.3s ease-out;
 }
-
 .fancy:hover {
- color: white;
- background: black;
+  color: white;
+  background: black;
 }
-
 .fancy:hover::before {
- width: 0.9375rem;
- background: white;
+  width: 0.9375rem;
+  background: white;
 }
-
 .fancy:hover .text {
- color: white;
- padding-left: 1.5em;
+  color: white;
+  padding-left: 1.5em;
 }
-
 .fancy:hover .top-key {
- left: -2px;
- width: 0px;
+  left: -2px;
+  width: 0px;
 }
-
 .fancy:hover .bottom-key-1,
- .fancy:hover .bottom-key-2 {
- right: 0;
- width: 0;
+.fancy:hover .bottom-key-2 {
+  right: 0;
+  width: 0;
 }
-
 /*glitch effect*/
 .glitch {
-  text-shadow: 0.05em 0 0 #00fffc, -0.03em -0.04em 0 #fc00ff,
-    0.025em 0.04em 0 #fffc00;
+  text-shadow: 0.05em 0 0 #00fffc, -0.03em -0.04em 0 #fc00ff, 0.025em 0.04em 0 #fffc00;
   animation: glitch 725ms infinite;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
-
 .glitch span {
   position: absolute;
   top: 0;
   left: 0;
 }
-
 .glitch span:first-child {
   animation: glitch 500ms infinite;
   clip-path: polygon(0 0, 100% 0, 100% 35%, 0 35%);
   transform: translate(-0.04em, -0.03em);
   opacity: 0.75;
 }
-
 .glitch span:last-child {
   animation: glitch 375ms infinite;
   clip-path: polygon(0 65%, 100% 65%, 100% 100%, 0 100%);
   transform: translate(0.04em, 0.03em);
   opacity: 0.75;
 }
-
 @keyframes glitch {
   0% {
-    text-shadow: 0.05em 0 0 #00fffc, -0.03em -0.04em 0 #fc00ff,
-      0.025em 0.04em 0 #fffc00;
+    text-shadow: 0.05em 0 0 #00fffc, -0.03em -0.04em 0 #fc00ff, 0.025em 0.04em 0 #fffc00;
   }
   15% {
-    text-shadow: 0.05em 0 0 #00fffc, -0.03em -0.04em 0 #fc00ff,
-      0.025em 0.04em 0 #fffc00;
+    text-shadow: 0.05em 0 0 #00fffc, -0.03em -0.04em 0 #fc00ff, 0.025em 0.04em 0 #fffc00;
   }
   16% {
-    text-shadow: -0.05em -0.025em 0 #00fffc, 0.025em 0.035em 0 #fc00ff,
-      -0.05em -0.05em 0 #fffc00;
+    text-shadow: -0.05em -0.025em 0 #00fffc, 0.025em 0.035em 0 #fc00ff, -0.05em -0.05em 0 #fffc00;
   }
   49% {
-    text-shadow: -0.05em -0.025em 0 #00fffc, 0.025em 0.035em 0 #fc00ff,
-      -0.05em -0.05em 0 #fffc00;
+    text-shadow: -0.05em -0.025em 0 #00fffc, 0.025em 0.035em 0 #fc00ff, -0.05em -0.05em 0 #fffc00;
   }
   50% {
-    text-shadow: 0.05em 0.035em 0 #00fffc, 0.03em 0 0 #fc00ff,
-      0 -0.04em 0 #fffc00;
+    text-shadow: 0.05em 0.035em 0 #00fffc, 0.03em 0 0 #fc00ff, 0 -0.04em 0 #fffc00;
   }
   99% {
-    text-shadow: 0.05em 0.035em 0 #00fffc, 0.03em 0 0 #fc00ff,
-      0 -0.04em 0 #fffc00;
+    text-shadow: 0.05em 0.035em 0 #00fffc, 0.03em 0 0 #fc00ff, 0 -0.04em 0 #fffc00;
   }
   100% {
-    text-shadow: -0.05em 0 0 #00fffc, -0.025em -0.04em 0 #fc00ff,
-      -0.04em -0.025em 0 #fffc00;
+    text-shadow: -0.05em 0 0 #00fffc, -0.025em -0.04em 0 #fc00ff, -0.04em -0.025em 0 #fffc00;
   }
 }

@@ -106,6 +106,7 @@ main {
 section {
   margin-bottom: 2rem;
   text-align: center;
+  overflow: hidden;
 }
 h1{
   color: #fff;

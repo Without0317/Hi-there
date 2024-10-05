@@ -27,9 +27,9 @@
 /* Intro styling */
 #intro {
     position: fixed;
-    width: 100%;
-    height: 100vh;
-    animation: bgintro 3s forwards;
+    width: 100vh;
+    height: 100%;
+    animation: bgintro 4s forwards;
     z-index: 10;
 }
 

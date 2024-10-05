@@ -1,3 +1,7 @@
+@font-face {
+  font-family: papyrus;
+  src: url(papyrus.ttf);
+}
 /* Intro section animations */
 @keyframes bgintro {
     0% {

@@ -37,7 +37,7 @@
 /* Intro styling */
 #intro {
     position: fixed;
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     animation: bgintro 4s forwards;
     z-index: 10;

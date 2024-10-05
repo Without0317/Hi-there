@@ -118,4 +118,5 @@ body {
     font-family: 'Papyrus', sans-serif;
     background-color: #292846;
     color: #C6C6C6;
+    overflow-x:hidden;
 }

@@ -144,6 +144,7 @@ body {
     background-color: #292846;
     color: #FFFFFF;
     overflow-x: hidden; /* Prevent horizontal scrolling */
+    src: url(papyrus.ttf);
 }
 
 .fancy {

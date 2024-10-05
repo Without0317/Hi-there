@@ -6,8 +6,12 @@
     50% {
         background-color: #0F0F14;
     }
-    100% {
+    80% {
         background-color: #C6C6C6;
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
     }
 }
 

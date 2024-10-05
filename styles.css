@@ -67,7 +67,7 @@ h1 {
     height: 200px;
     border-radius: 50%;
     object-fit: cover;
-    border: 4px solid #FFFFFF;
+    border: 4px solid #C6C6C6;
     margin-right: 30px;
 }
 
@@ -90,7 +90,7 @@ h1 {
 
 /* Content Section */
 #content {
-    background-color: #FFFFFF;
+    background-color: #C6C6C6;
     padding: 50px;
     color: #292846;
     min-height: 50vh;
@@ -117,5 +117,5 @@ body {
     margin: 0;
     font-family: 'Papyrus', sans-serif;
     background-color: #292846;
-    color: #FFFFFF;
+    color: #C6C6C6;
 }

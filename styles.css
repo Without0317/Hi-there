@@ -86,7 +86,7 @@ h1 {
 #me {
     width: 10vw;
     height: 10vw;
-    border-radius: 50%;
+    border-radius: 50;
     object-fit: cover;
     border: .5vh solid #FFFFFF;
     margin-right: 25px;

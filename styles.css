@@ -84,8 +84,8 @@ h1 {
 }
 
 #me {
-    width: 100px;
-    height: 10p0x;
+    width: auto;
+    height: auto;
     border-radius: 50;
     object-fit: cover;
     border: .5vh solid #FFFFFF;

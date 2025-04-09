@@ -84,11 +84,11 @@ h1 {
 }
 
 #me {
-    width: auto;
-    height: auto;
+    width: 10vh;
+    height: 10vh;
     border-radius: 50;
     object-fit: cover;
-    border: .5vh solid #FFFFFF;
+    border: .5px solid #FFFFFF;
     margin-right: 25px;
     max-width: 100px;
     max-height: 100px;

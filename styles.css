@@ -1,0 +1,458 @@
+@font-face {
+    font-family: papyrus;
+    src: url(papyrus.ttf);
+  }
+/* Intro section animations */
+@keyframes bgintro {
+    0% {
+        background-color: #0F0F14;
+    }
+    50% {
+        background-color: #0F0F14;
+    }
+    90% {
+        background-color: #C6C6C6;
+        opacity: 1;
+    }
+    100% {
+        background-color: #C6C6C6;
+        opacity: 0;
+    }
+}
+
+@keyframes fadeout {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes slidedown {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0%);
+    }
+}
+@keyframes blink{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+/* Intro styling */
+#intro {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    animation: bgintro 3s forwards;
+    z-index: 10;
+}
+
+#textint {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-size: 8vw;
+    color: #292846;
+    font-family: papyrus;
+}
+
+/* Ensure intro is hidden after fadeout */
+#intro.fadeOut {
+    display: none;
+}
+
+/* Bio Section */
+#bio {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    background-color: #292846;
+    color: #FFFFFF;
+    min-height: 50vh;
+    z-index: 2;
+    position: relative;
+    animation-name: slidedown;
+    animation-duration: 1s;
+    max-width: 100%; /* Allow full width */
+    box-sizing: border-box; /* Include padding in total width */
+}
+
+#me {
+    width: 10vw;
+    height: 10vw;
+    border-radius: 50%;
+    object-fit: cover;
+    border: .5vh solid #FFFFFF;
+    margin-right: 25px;
+    max-width: 100px;
+    max-height: 100px;
+    min-height: 10px;
+    min-width: 10px;
+}
+
+.bio-details {
+    text-align: left;
+}
+
+.bio-details h2 {
+    font-size: 48px;
+    margin-bottom: 8px;
+    font-family: papyrus;
+}
+
+.bio-details p {
+    font-size: 22px;
+    margin: 5px 0;
+    color: #C6C6C6;
+    font-family: papyrus;
+    font-style: italic;
+}
+
+.bio-details p2 {
+    font-size: 18px;
+    margin: 5px 0;
+    color: #C6C6C6;
+    font-family: papyrus;
+}
+
+
+/* navbar Section */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #1e1d33;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    z-index: 5;
+  }
+  
+  .navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+  }
+  
+  .navbar a {
+    color: #c6c6c6;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+  }
+  
+  .navbar a:hover {
+    color: white;
+  }
+  
+
+
+/* about Section */
+#about {
+    background-color: #C6C6C6;
+    padding: 50px;
+    color: #292846;
+    min-height: 50vh;
+    width: 100%; /* Full width */
+    margin: 0; /* Remove margin */
+    z-index: 2;
+    position: relative;
+    box-sizing: border-box; /* Include padding and borders in total width */
+    text-align: center;
+}
+
+#about h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    font-family: papyrus;
+}
+
+
+#about p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    font-family: papyrus;
+}
+
+/* skills Section */
+#skills {
+    background-color: #C6C6C6;
+    padding: 50px;
+    color: #292846;
+    min-height: 50vh;
+    width: 100%; /* Full width */
+    margin: 0; /* Remove margin */
+    z-index: 2;
+    position: relative;
+    box-sizing: border-box; /* Include padding and borders in total width */
+    text-align: center;
+}
+
+#skills h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    font-family: papyrus;
+}
+
+
+#skills p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    font-family: papyrus;
+}
+
+/* project Section */
+#project {
+    background-color: #C6C6C6;
+    padding: 50px;
+    color: #292846;
+    min-height: 50vh;
+    width: 100%; /* Full width */
+    margin: 0; /* Remove margin */
+    z-index: 2;
+    position: relative;
+    box-sizing: border-box; /* Include padding and borders in total width */
+    text-align: center;
+}
+
+#project h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    font-family: papyrus;
+}
+
+
+#project p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    font-family: papyrus;
+}
+
+/* achievement Section */
+#achievement {
+    background-color: #C6C6C6;
+    padding: 50px;
+    color: #292846;
+    min-height: 50vh;
+    width: 100%; /* Full width */
+    margin: 0; /* Remove margin */
+    z-index: 2;
+    position: relative;
+    box-sizing: border-box; /* Include padding and borders in total width */
+    text-align: center;
+}
+
+#achievement h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    font-family: papyrus;
+}
+
+
+#achievement p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    font-family: papyrus;
+}
+
+/* contact Section */
+#contact {
+    background-color: #C6C6C6;
+    padding: 50px;
+    color: #292846;
+    min-height: 50vh;
+    width: 100%; /* Full width */
+    margin: 0; /* Remove margin */
+    z-index: 2;
+    position: relative;
+    box-sizing: border-box; /* Include padding and borders in total width */
+    text-align: center;
+}
+
+#contact h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    font-family: papyrus;
+}
+
+
+#contact p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    font-family: papyrus;
+}
+
+
+
+/* General Styling */
+body {
+    margin: 0;
+    font-family: 'Papyrus', sans-serif;
+    src: url(papyrus.ttf);
+    background-color: #292846;
+    color: #FFFFFF;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+.fancy {
+    background-color: transparent;
+    border: 2px solid #292846;
+    border-radius: 0;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    margin: 0;
+    outline: none;
+    overflow: visible;
+    padding: 2em 2em;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    text-transform: none;
+    transition: all 0.3s ease-in-out;
+    user-select: none;
+    font-size: 13px;
+}
+
+.fancy::before {
+    content: " ";
+    width: 1.5625rem;
+    height: 2px;
+    background: #292846;
+    top: 50%;
+    left: 1.5em;
+    position: absolute;
+    transform: translateY(-50%);
+    transform-origin: center;
+    transition: background 0.3s linear, width 0.3s linear;
+}
+
+.fancy .text {
+    font-size: 1.125em;
+    line-height: 1.33333em;
+    padding-left: 2em;
+    display: block;
+    text-align: left;
+    transition: all 0.3s ease-in-out;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #292846;
+}
+
+.fancy .top-key {
+    height: 2px;
+    width: 1.5625rem;
+    top: -2px;
+    left: 0.625rem;
+    position: absolute;
+    background: #C6C6C6;
+    transition: width 0.5s ease-out, left 0.3s ease-out;
+}
+
+.fancy .bottom-key-1 {
+    height: 2px;
+    width: 1.5625rem;
+    right: 1.875rem;
+    bottom: -2px;
+    position: absolute;
+    background: #C6C6C6;
+    transition: width 0.5s ease-out, right 0.3s ease-out;
+}
+
+.fancy .bottom-key-2 {
+    height: 2px;
+    width: 0.625rem;
+    right: 0.625rem;
+    bottom: -2px;
+    position: absolute;
+    background: #C6C6C6;
+    transition: width 0.5s ease-out, right 0.3s ease-out;
+}
+
+.fancy:hover {
+    color: white;
+    background: #292846;
+}
+
+.fancy:hover::before {
+    width: 0.9375rem;
+    background: white;
+}
+
+.fancy:hover .text {
+    color: white;
+    padding-left: 1.5em;
+}
+
+.fancy:hover .top-key {
+    left: -2px;
+    width: 0px;
+}
+
+.fancy:hover .bottom-key-1,
+.fancy:hover .bottom-key-2 {
+    right: 0;
+    width: 0;
+}
+
+/* The entire scrollbar */
+::-webkit-scrollbar {
+    width: 0px; /* Width of the scrollbar */
+}
+
+/* The scrollbar track */
+::-webkit-scrollbar-track {
+    background: #C6C6C6; /* Color of the track */
+}
+
+/* The scrollbar handle */
+::-webkit-scrollbar-thumb {
+    background: #292846; /* Color of the handle */
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #292846; /* Color when hovered */
+    animation-name: blink;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+
+html, body {
+  height: 100%;
+}
+
+.page-section {
+    display: none;
+    min-height: 80vh;
+    padding: 40px;
+  }
+  
+  .page-section.active {
+    display: block;
+  }
+  
